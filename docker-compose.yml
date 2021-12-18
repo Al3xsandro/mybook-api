@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  database:
+    image: postgres
+    container_name: database_mybooks
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=mybooks
+    volumes:
+      - pgdata:/data/POSTGRES_DB
+
+volumes:
+  pgdata:
+    driver: local
