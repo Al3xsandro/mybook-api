@@ -26,6 +26,12 @@ import { FindAllBooksUseCase } from './useCases/FindAllBooks/FindAllBooksUseCase
     },
   ],
   controllers: [BooksController],
-  exports: [TypeOrmModule],
+  exports: [
+    TypeOrmModule,
+    {
+      provide: 'BooksRepository',
+      useClass: BooksRepository,
+    },
+  ],
 })
 export class BooksModule {}

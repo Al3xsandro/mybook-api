@@ -14,6 +14,10 @@ export class BooksRepository implements IBooksRepository {
     this.booksRepository = getRepository(Book);
   }
 
+  async findById(id: string): Promise<Book> {
+    return await this.booksRepository.findOne(id);
+  }
+
   async findByCep(cep: string): Promise<Book[]> {
     const books = await this.booksRepository.find({
       where: {

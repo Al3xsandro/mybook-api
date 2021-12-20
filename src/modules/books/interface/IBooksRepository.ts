@@ -7,4 +7,5 @@ export interface IBooksRepository {
   findByCity(city: string): Promise<Book[]>;
   findByCep(cep: string): Promise<Book[]>;
   findByTitle(title: string): Promise<Book[]>;
+  findById(id: string): Promise<Book>;
 }
