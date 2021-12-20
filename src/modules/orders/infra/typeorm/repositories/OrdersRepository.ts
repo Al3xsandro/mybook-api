@@ -14,6 +14,37 @@ export class OrdersRepository implements IOrdersRepository {
     this.repository = getRepository(Order);
   }
 
+  async approveOrder(order_id: string): Promise<Order> {
+    await this.repository.update(order_id, {
+      approved: 'APPROVED',
+    });
+
+    const order = await this.repository.findOne(order_id);
+
+    return order;
+  }
+  async findOrderById(id: string): Promise<Order> {
+    const order = await this.repository.findOne(id);
+
+    return order;
+  }
+  async findAllOrdersToApprove(user_id: string): Promise<Order[]> {
+    const orders = await this.repository.find({
+      where: {
+        user_id,
+        approved: 'PENDING',
+      },
+    });
+
+    return orders;
+  }
+
+  async findAllOrders(): Promise<Order[]> {
+    const orders = await this.repository.find();
+
+    return orders;
+  }
+
   async create({
     user_id,
     datetime,

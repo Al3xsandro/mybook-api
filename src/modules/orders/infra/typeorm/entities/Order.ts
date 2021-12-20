@@ -31,8 +31,8 @@ class Order {
   @Column()
   user_id: string;
 
-  @Column({ default: false })
-  approved: string;
+  @Column({ default: 'PENDING' })
+  approved: 'APPROVED' | 'PENDING';
 
   @Column()
   datetime: string;
