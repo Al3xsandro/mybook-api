@@ -9,8 +9,8 @@ import {
 } from '@nestjs/common';
 
 import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
-import { JwtAuthGuard } from 'src/modules/auth/infra/guards/jwt.guard';
-import { UserId } from 'src/shared/infra/http/decorators/userid.decorator';
+import { JwtAuthGuard } from '../../../modules/auth/infra/guards/jwt.guard';
+import { UserId } from '../../../shared/infra/http/decorators/userid.decorator';
 
 import { IFindOrdersDTO } from '../dtos/FindOrders.dto';
 import { ICreateOrderDTO } from '../dtos/ICreateOrder.dto';
