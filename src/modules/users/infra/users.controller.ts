@@ -19,9 +19,10 @@ export class UsersController {
 
   @ApiBearerAuth()
   @UseGuards(JwtAuthGuard)
+  @ApiOperation({ summary: 'Find user data' })
   @Get('/profile')
-  index(@UserId() id: string) {
-    return this.findUserUseCase.execute(id);
+  async index(@UserId() id: string) {
+    return await this.findUserUseCase.execute(id);
   }
 
   @ApiOperation({ summary: 'Create a new user' })
