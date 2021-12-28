@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { ICreateUserDTO } from 'src/modules/users/dtos/ICreateUser.dto';
+import { ICreateUserDTO } from '../../../../../modules/users/dtos/ICreateUser.dto';
 import { getRepository, Repository } from 'typeorm';
 
 import { IUsersRepository } from '../../../interfaces/IUsersRepository';

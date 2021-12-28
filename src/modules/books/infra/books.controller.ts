@@ -15,7 +15,7 @@ import {
   ApiQuery,
   ApiTags,
 } from '@nestjs/swagger';
-import { JwtAuthGuard } from 'src/modules/auth/infra/guards/jwt.guard';
+import { JwtAuthGuard } from '../../../modules/auth/infra/guards/jwt.guard';
 
 import { ICreateBookDTO } from '../dtos/ICreateBook.dto';
 import { IFindBooksDTO } from '../dtos/IFindBooks.dto';

@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { ICreateOrderDTO } from 'src/modules/orders/dtos/ICreateOrder.dto';
-import { IOrdersRepository } from 'src/modules/orders/interfaces/IOrdersRepository';
+import { ICreateOrderDTO } from '../../../../../modules/orders/dtos/ICreateOrder.dto';
+import { IOrdersRepository } from '../../../../../modules/orders/interfaces/IOrdersRepository';
 import { getRepository, Repository } from 'typeorm';
 import { Order } from '../entities/Order';
 

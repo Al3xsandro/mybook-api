@@ -1,5 +1,5 @@
-import { Book } from 'src/modules/books/infra/typeorm/entities/Book';
-import { Order } from 'src/modules/orders/infra/typeorm/entities/Order';
+import { Book } from '../../../../../modules/books/infra/typeorm/entities/Book';
+import { Order } from '../../../../../modules/orders/infra/typeorm/entities/Order';
 
 import { Role } from '../../../../../shared/infra/http/enum/role.enum';
 

@@ -5,7 +5,7 @@ import { CreateUserUseCase } from '../useCases/createAccount/CreateUserUseCase.s
 import { ApiTags, ApiBody, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
 import { JwtAuthGuard } from '../../../modules/auth/infra/guards/jwt.guard';
 import { FindUserUseCase } from '../useCases/findAccount/FindUserUseCase.service';
-import { UserId } from 'src/shared/infra/http/decorators/userid.decorator';
+import { UserId } from '../../../shared/infra/http/decorators/userid.decorator';
 
 @ApiTags('Users')
 @Controller('users')
