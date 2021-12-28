@@ -9,7 +9,7 @@ import {
 
 import { v4 as uuidV4 } from 'uuid';
 
-import { User } from 'src/modules/users/infra/typeorm/entities/User';
+import { User } from '../../../../../modules/users/infra/typeorm/entities/User';
 
 @Entity('books')
 export class Book {
@@ -20,7 +20,7 @@ export class Book {
   name: string;
 
   @Column({ default: true })
-  avaliable: boolean;
+  available: boolean;
 
   @Column()
   year: string;
