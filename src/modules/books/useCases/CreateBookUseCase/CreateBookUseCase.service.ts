@@ -3,7 +3,7 @@ import { HttpException, HttpStatus, Inject, Injectable } from '@nestjs/common';
 import { IUsersRepository } from '../../../users/interfaces/IUsersRepository';
 import { ICreateBookDTO } from '../../dtos/ICreateBook.dto';
 
-import { IBooksRepository } from '../../interface/IBooksRepository';
+import { IBooksRepository } from '../../interfaces/IBooksRepository';
 
 @Injectable()
 export class CreateBookUseCase {

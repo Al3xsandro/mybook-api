@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ICreateBookDTO } from '../../../../../modules/books/dtos/ICreateBook.dto';
 import { getRepository, ILike, Like, Repository } from 'typeorm';
-import { IBooksRepository } from '../../../../../modules/books/interface/IBooksRepository';
+import { IBooksRepository } from '../../../../../modules/books/interfaces/IBooksRepository';
 import { Book } from '../entities/Book';
 
 @Injectable()

@@ -1,5 +1,5 @@
 import { HttpException, HttpStatus, Inject, Injectable } from '@nestjs/common';
-import { IBooksRepository } from '../../../../modules/books/interface/IBooksRepository';
+import { IBooksRepository } from '../../../../modules/books/interfaces/IBooksRepository';
 import { ICreateOrderDTO } from '../../dtos/ICreateOrder.dto';
 import { IOrdersRepository } from '../../interfaces/IOrdersRepository';
 

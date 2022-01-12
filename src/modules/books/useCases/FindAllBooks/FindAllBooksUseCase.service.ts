@@ -2,7 +2,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { IFindBooksDTO } from '../../dtos/IFindBooks.dto';
 
-import { IBooksRepository } from '../../interface/IBooksRepository';
+import { IBooksRepository } from '../../interfaces/IBooksRepository';
 
 @Injectable()
 export class FindAllBooksUseCase {
